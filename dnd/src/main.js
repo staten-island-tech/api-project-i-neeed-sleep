@@ -10,11 +10,11 @@ async function page() {
             races.forEach(r => {
                 document.querySelector("#stuff")
                     .insertAdjacentHTML("beforeend",`
-                        <div id = "card" class="">
-                            <div id="name">${r.name}</div>
-                            <div id="desc">${r.asi_desc}</div>
-                            <div id="desc">${r.alignment}</div>
-                            <a href="${r.document_url}"><div id="doc">This race is from ${r.document_title}</div></a>  
+                        <div id = "card" class="box-border w-150 l-75 border-2 border-amber-500 bg-orange-950 text-amber-500">
+                            <div id="name" class="font-serif font-bold">${r.name}</div>
+                            <div id="desc" class="font-serif">${r.asi_desc}</div>
+                            <div id="desc" class="font-serif">${r.alignment}</div>
+                            <a href="${r.document__url}"><div id="doc" class="font-serif">This race is from ${r.document__title}</div></a>  
                             <button id = "details">More Details</button>
                         </div>
                         <br>
