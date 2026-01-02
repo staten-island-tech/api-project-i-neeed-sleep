@@ -7,6 +7,11 @@ async function page() {
         } else {
             const data = await response.json();
             const races = data.results;
+
+            //HEADER + SEARCHBAR CODE, also, scratch the breadcrumbs, these arent sprt pages 
+
+            //Light dark mode code
+
             races.forEach(r => {
                 document.querySelector("#stuff")
                     .insertAdjacentHTML("beforeend",`
@@ -15,7 +20,7 @@ async function page() {
                             <div id="name" class="font-serif font-bold">${r.name}</div>
                             <div id="desc" class="font-serif">${r.asi_desc}</div>
                             <div id="desc" class="font-serif">${r.alignment}</div>
-                            <a href="${r.document__url}"><div id="doc" class="font-serif">This race is from ${r.document__title}</div></a>  
+                            <a href="${r.document__url}"><div id="doc" class="font-serif underlines">This race is from ${r.document__title}</div></a>  
                             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" id = "details" >More Details</button>
                         </div>
                         <br>
@@ -29,23 +34,29 @@ async function page() {
                     let race = races.filter(race => race.name == n);
                     document.querySelector("#stuff").innerHTML = 
                         `<div>
-                            <div>${n}</div>
+                            <h1>${n}</h1>
                             <br>
-                            ${race.asi_desc}
+                            <h3>${race.asi_desc}</h3>
                             <br>
-                            ${race.alignment}
+                            <h2>ALignment</h2>
+                            <h3>${race.alignment}</h3>
                             <br>
-                            ${race.traits}
+                            <h2>Special Traits</h2>
+                            <h3>${race.traits}</h3>
                             <br>
-                            ${race.age}
+                            <h2>Lifespan</h2>
+                            <h3>${race.age}</h3>
                             <br>
-                            ${race.size}
+                            <h2>Size</h2>
+                            <h3>${race.size}</h3>
                             <br>
-                            ${race.speed_desc}
+                            <h2>Walkspeed</h2>
+                            <h3>${race.speed_desc}</h3>
                             <br>
-                            ${race.languages}
+                            <h2>Linguistics</h2>
+                            <h3>${race.languages}</h3>
                             <br>
-                            ${race.vision}
+                            <h3>${race.vision}</h3>
                             <br>
                         </div>`;
                 })
