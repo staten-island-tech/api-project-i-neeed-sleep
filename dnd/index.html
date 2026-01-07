@@ -6,14 +6,16 @@
     <link href="/src/style.css" rel="stylesheet">
     <title>dnd</title>
   </head>
-  <body>
-    <!-- Add header, searchbar -->
-    <div class = "w-full h-32">
-
+  <body class="bg-cyan-900">
+    <div class = "w-full h-45 bg-rose-900 absolute top-0">
+      <h1 class="font-bold text-yellow-900 text-4xl font-serif text-center mt-4">Dungeons & Dragons Race List</h1>
+      <form id = search class = "m-10 p-2 bg-slate-700 text-slate-300 font-serif">
+        <input type="text" id = "srch" class = "w-full" placeholder="Search race by name" />
+      </form> 
     </div>
 
+    <div id = "stuff" class = "mt-40"><br></div>
     
-    <div id = "stuff" class="bg-cyan-900 "></div>
 
     <script src="src/main.js"></script>
   </body>
